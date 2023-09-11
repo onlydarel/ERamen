@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERamen Store</title>
+  <link rel="shortcut icon" href="Assets/ramen_dojo.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="Style/promotionstyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inika&family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <nav id="navbar">
+      <ul class="navbar">
+        <a href="Homepage.html" class="logo">
+          <img src="Assets/ramen_dojo.png" alt="Logo">
+        </a>
+        <li><a href="Homepage.html" class="active">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="Promotion.html">Promotion</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="deals">
+    <div class="dropdown">
+      <div class="select">
+        <span class="selected">DEALS</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li>E-Wallet</li>
+        <li>Tea Ceremony</li>
+        <li>Family Gathering</li>
+      </ul>
+    </div>
+  </div>
+  <div class="date">
+    <div class="dropdown-date">
+      <div class="select">
+        <span class="selected">START DATE-END DATE</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li>January</li>
+        <li>February</li>
+      </ul>
+    </div>
+  </div>
+  <div class="Offers">
+    <div class="title">
+      <p>3 OFFERS</p>
+    </div>
+    <hr color="#000000" class="line">
+    <div class="offer-1">
+      <img src="" alt="">
+    </div>
+  </div>
+
+  <div class="promo">
+    <div class="ewallet-box">
+      <h2 class="ewallet-title">
+        E-wallet
+      </h2>
+      <p class="ewallet-text">
+        Attention, foodies and e-Wallet users! From now on, you can enjoy an exclusive cashback offer with OVO and Shopee! OVO and Shopee provides a convenient and secure way to make payments, and now it's even more rewarding when you choose to use it at ERamen Shop. 
+        Treat yourself to a satisfying meal while enjoying the benefits of cashback!
+      </p>
+      <img src="Assets/ovo.jpg">
+    </div>
+
+    <div class="tea-box">
+      <h2 class="tea-title">
+        Tea Ceremony
+      </h2>
+      <p class="tea-text">
+        What could be more delightful than savoring our delicious dishes while sipping on fresh green tea and immersing yourself in Japanese tradition? With ERamen Shop, you will experience warmth and beauty in one extraordinary occasion.
+        <br>
+        <br>
+        January 1st - February 6th
+      </p>
+      <img src="Assets/tea gathering.jpg">
+    </div>
+
+    <div class="family-box">
+      <h2 class="family-title">
+        Family Gathering
+      </h2>
+      <p class="family-text">
+        ERamen Shop provides a warm and welcoming ambiance, perfect for family gatherings. We believe that sharing delicious food together strengthens the bond between loved ones. Our friendly staff is dedicated to ensuring your dining experience is exceptional and memorable.
+        <br>
+        <br>
+        January 1st - January 16th
+      </p>
+      <img src="Assets/family-gathering.jpg">
+    </div>
+    <img src="Assets/pagoda2.jpg" id="pagoda" class="pagoda">
+    <img src="Assets/redcircle2.png" id="circle" class="circle">
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="footer">
+    <p>© PT. EFood Indonesia. All Rights Reserved.</p>
+    <div class="facebook">
+      <a href="https://www.facebook.com/">
+        <img src="Assets\facebook.png" alt="">
+      </a>
+    </div>
+    <div class="instagram">
+      <a href="https://www.instagram.com/">
+        <img src="Assets\ig.png" alt="">
+      </a>
+    </div>
+    <div class="twitter">
+      <a href="https://twitter.com/i/flow/login">
+        <img src="Assets\twt.png" alt="">
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+   
+    const dealsDropdown = document.querySelector('.deals .dropdown');
+    const dealsSelect = dealsDropdown.querySelector('.select');
+    const dealsCaret = dealsDropdown.querySelector('.caret');
+    const dealsMenu = dealsDropdown.querySelector('.menu');
+    const dealsOptions = dealsDropdown.querySelectorAll('.menu li');
+    const dealsSelected = dealsDropdown.querySelector('.selected');
+    
+    dealsSelect.addEventListener('click', () => {
+      dealsSelect.classList.toggle('select-clicked');
+      dealsCaret.classList.toggle('caret-rotate');
+      dealsMenu.classList.toggle('menu-open');
+    });
+    
+    dealsOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        dealsSelected.innerText = option.innerText;
+        dealsSelect.classList.remove('select-clicked');
+        dealsCaret.classList.remove('caret-rotate');
+        dealsMenu.classList.remove('menu-open');
+        dealsOptions.forEach(option => {
+          option.classList.remove('active');
+        });
+        option.classList.add('active');
+      });
+    });
+    
+    const dateDropdown = document.querySelector('.date .dropdown-date');
+    const dateSelect = dateDropdown.querySelector('.select');
+    const dateCaret = dateDropdown.querySelector('.caret');
+    const dateMenu = dateDropdown.querySelector('.menu');
+    const dateOptions = dateDropdown.querySelectorAll('.menu li');
+    const dateSelected = dateDropdown.querySelector('.selected');
+    
+    dateSelect.addEventListener('click', () => {
+      dateSelect.classList.toggle('select-clicked');
+      dateCaret.classList.toggle('caret-rotate');
+      dateMenu.classList.toggle('menu-open');
+    });
+    
+    dateOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        dateSelected.innerText = option.innerText;
+        dateSelect.classList.remove('select-clicked');
+        dateCaret.classList.remove('caret-rotate');
+        dateMenu.classList.remove('menu-open');
+        dateOptions.forEach(option => {
+          option.classList.remove('active');
+        });
+        option.classList.add('active');
+      });
+    });
+    
+
+  </script>
+</body>
+</html>

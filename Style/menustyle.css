@@ -1,0 +1,413 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.50s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2D2C2F;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12%;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  color: #f7f7f7;
+  display: flex;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px;
+  margin: 0 10px;
+  transition: all 0.50s ease;
+  text-decoration: none;
+}
+
+/* Navbar End */
+
+/* Footer */
+.footer{
+  box-sizing: border-box;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  top: 1950px;
+  background: #2D2C2F;
+}
+
+.footer p{
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 46px;
+  position: absolute;
+  color: #CCB48F;
+  top: 30px;
+  left: 50px;
+}
+
+.facebook img{
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  right: 300px;
+}
+
+.instagram img{
+  position: absolute;
+  width: 54px;
+  top: 30px;
+  right: 200px;
+}
+
+.twitter img{
+  position: absolute;
+  width: 60px;
+  top: 30px;
+  right: 100px;
+}
+/* Footer End */
+
+.ramen {
+  position: absolute;
+  top: 80px;
+  font-family: Montserrat;
+}
+
+.ramen h2{
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  font-size: 54px;
+  font-weight: 900;
+}
+
+.ramen p {
+  position: absolute;
+  top: 155px;
+  left: 50px;
+  width: 450px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.find-store {
+  position: absolute;
+  top: 375px;
+  left: 120px;
+}
+
+.button-learn-more {
+  width: 230px;
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #1E2D1F;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.ramen-slider{
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  top: 50px;
+  left: 600px;
+}
+
+.ramen-cont {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  position: absolute;
+  right: -60px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  position: absolute;
+  right: 475px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#prev-arrow, #next-arrow {
+  width: 160px;
+  height: 90px;
+}
+
+#prev-arrow {
+  transform: scaleX(-1);
+}
+
+#ramen-4, #ramen-3, #ramen-2, #ramen-1 {
+  height: 500px;
+  width: 500px;
+  pointer-events: none;
+}
+
+#ramen-4 {
+  position: absolute;
+  left: 53px;
+  top: 15px;
+}
+
+#ramen-1 {
+  position: absolute;
+  left: 55px;
+}
+
+#ramen-3 {
+  height: 550px;
+  width: 550px;
+  position: absolute;
+  bottom: 5px;
+}
+
+#ramen-2 {
+  position: absolute;
+  left: 55px;
+}
+
+.sd-slider {
+  position: absolute;
+  top: 600px;
+  left: 700px;
+}
+
+#side-1, #side-2{
+  width: 1280px;
+  height: auto;
+}
+
+#side-1{
+  position: absolute;
+  top: -105px;
+  right: 700px;
+}
+
+.sd-slider {
+  display: flex;
+}
+
+.sd-slide {
+  flex: 0 0 50%;
+}
+
+.drinks {
+  position: absolute;
+  top: 1500px;
+}
+
+.table {
+  width: 1280px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.drink-list {
+  position: absolute;
+  bottom: 150px;
+}
+
+.drink-list img{
+  z-index: 2;
+  height: auto;
+  width: 150px;
+}
+
+#ocha {
+  position: absolute;
+  bottom: -20px;
+  left: 80px;
+  width: 200px;
+}
+
+#margarita{
+  position: absolute;
+  bottom: -20px;
+  left: 220px;
+  width: 270px;
+}
+
+#mojito{
+  position: absolute;
+  bottom:-20px;
+  left: 360px;
+  width: 320px;
+}
+
+#orange{
+  position: absolute;
+  bottom: -20px;
+  left: 550px;
+  width: 250px;
+}
+
+#carribean{
+  position: absolute;
+  bottom: -60px;
+  left: 660px;
+  width: 320px;
+}
+
+#shochu-glass{
+  position: absolute;
+  bottom: 0px;
+  left: 850px;
+  width: 220px;
+}
+
+#shochu-bottle{
+  position: absolute;
+  bottom: 0px;
+  width: 100px;
+  left: 950px;
+  z-index: 1;
+}
+
+#sake {
+  position: absolute;
+  width: 400px;
+  left: 880px;
+  bottom: 0px;
+}
+
+.drink-list p{
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.ocha-text{
+  position: absolute;
+  top: -200px;
+  left: 140px;
+}
+
+.margarita-text{
+  position: absolute;
+  top: -200px;
+  left: 260px;
+  text-align: center;
+}
+
+.mojito-text{
+  position: absolute;
+  top: -200px;
+  left: 470px;
+  text-align: center;
+}
+
+.sunrise-text{
+  z-index: 3;
+  position: absolute;
+  top: -375px;
+  left: 600px;
+  text-align: center;
+}
+
+.carribean-text{
+  z-index: 3;
+  position: absolute;
+  top: -375px;
+  left: 750px;
+  text-align: center;
+}
+
+.shochu-text {
+  z-index: 3;
+  position: absolute;
+  top: -255px;
+  left: 930px;
+  text-align: center;
+}
+
+.sake-text{
+  z-index: 3;
+  position: absolute;
+  top: -255px;
+  left: 1100px;
+  text-align: center;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  right: 0px;
+  bottom: -100px;
+}
+
+#mountains {
+  width: 1280px;
+  height: 1000px;
+}
